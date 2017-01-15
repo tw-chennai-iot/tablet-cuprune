@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="5dip" >
 
-    <!--  ListRow Left sied Thumbnail image -->
-    <LinearLayout android:id="@+id/thumbnail"
-        android:layout_width="wrap_content"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="3dip"
-        android:gravity="center_vertical"
-        android:layout_alignParentLeft="true"
-        android:layout_marginRight="5dip">
+        android:clipChildren="false"
+        android:contextClickable="false"
+        android:gravity="center_vertical">
 
         <ImageView
-            android:id="@+id/list_image"
-            android:layout_width="50dip"
-            android:layout_height="50dip"
-            android:src="@drawable/kurta"/>
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/kurta" />
 
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ThoughtWorks" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:id="@+id/button2"
+            android:onClick="removeItem"/>
     </LinearLayout>
 
-    <!-- Title Of Song-->
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/thumbnail"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:textColor="#040404"
-        android:typeface="sans"
-        android:textSize="15dip"
-        android:textStyle="bold"/>
-
-
-    <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rs. 500"
-        android:layout_marginRight="41dp"
-        android:textSize="10dip"
-        android:textColor="#10bcc9"
-        android:textStyle="bold"
-        android:layout_marginEnd="41dp"
-        android:gravity="center_vertical"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/button2"
-        android:layout_toStartOf="@+id/button2" />
-
-    <TextView
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/tagId"
-        android:visibility="invisible"
-        />
+        android:layout_height="1dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/darker_gray" />
 
-    <Button
-        android:text="Remove"
-        android:layout_width="50dp"
-        android:layout_height="25dp"
-        android:id="@+id/button2"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textAlignment="center"
-        android:textSize="5sp"
-        android:onClick="removeItem"
-        android:visibility="invisible"
-        />
+        android:padding="20dp"
+        android:weightSum="1">
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:text="Rs. 250"
+            android:id="@+id/price"
+            android:layout_weight="0.09"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:layout_width="114dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tagId"
+            android:visibility="invisible"
+            />
+    </LinearLayout>
+
+</LinearLayout>
