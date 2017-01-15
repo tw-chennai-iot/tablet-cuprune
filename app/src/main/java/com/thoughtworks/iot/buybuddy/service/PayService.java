@@ -44,7 +44,7 @@ public class PayService extends AsyncTask<String, Void, String> {
     }
 
     private Object findMethodAndExecute(String[] params) throws IOException {
-        Response<Cart> cart = restInt.pay(params[0]).execute();
+        Response<Cart> cart = restInt.get(params[0]).execute();
         return cart.body();
     }
 

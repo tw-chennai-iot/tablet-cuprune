@@ -11,7 +11,7 @@
     tools:context="com.thoughtworks.iot.buybuddy.SuccessActivity">
 
     <TextView
-        android:text="Payment Successful !"
+        android:text="Scan and Pay"
         android:layout_width="300sp"
         android:layout_height="100sp"
         android:id="@+id/textView"
@@ -21,15 +21,23 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="Shop again!"
+    <ImageView
+        android:id="@+id/qrCode"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="70dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
         android:id="@+id/button3"
-        android:layout_below="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qrCode"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
-        android:onClick="startAgain"/>
+        android:onClick="startAgain"
+        android:text="Shop again!" />
 
 
 </RelativeLayout>

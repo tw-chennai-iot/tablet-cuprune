@@ -8,4 +8,5 @@ public class Cart {
     public double value;
     public List<Product> products = new ArrayList<>();
     public String status;
+    public String redirectUrl;
 }

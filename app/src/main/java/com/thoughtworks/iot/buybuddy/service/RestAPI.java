@@ -7,6 +7,7 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -21,7 +22,7 @@ public interface RestAPI{
     @DELETE("/cart/{cart-id}/tag/{tag-id}")
     Call<Cart> deleteItemFromCart(@Path("cart-id")String cartId,@Path("tag-id")String tagId);
 
-    @POST("/cart/{cart-id}/pay")
-    Call<Cart> pay(@Path("cart-id")String cartId);
+    @GET("/cart/{cart-id}")
+    Call<Cart> get(@Path("cart-id")String cartId);
 
 }
