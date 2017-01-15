@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
@@ -63,10 +64,10 @@ public class NfcReaderActivity extends Activity {
         receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                System.out.println("in this goddamn activity");
+                addProducts(intent.getStringExtra("nfctag"));
             }
         };
-        LocalBroadcastManager.getInstance(this).registerReceiver(receiver, "ACTION_REFRESH");
+        LocalBroadcastManager.getInstance(this).registerReceiver(receiver, new IntentFilter("ACTION_REFRESH"));
     }
 
     @Override

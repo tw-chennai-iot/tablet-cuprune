@@ -14,7 +14,9 @@ public class FMS extends FirebaseMessagingService {
         Log.d(TAG, "From: " + remoteMessage.getFrom());
         String nfcTag = remoteMessage.getNotification().getBody();
         Log.d(TAG, "Notification Message Body: " + nfcTag);
-
-        LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("ACTION_REFRESH"));
+        Intent intent = new Intent("ACTION_REFRESH");
+        // You can also include some extra data.
+        intent.putExtra("nfctag", nfcTag);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 }
