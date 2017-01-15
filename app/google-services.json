@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "677140636940",
+    "firebase_url": "https://cuprune-tablet.firebaseio.com",
+    "project_id": "cuprune-tablet",
+    "storage_bucket": "cuprune-tablet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677140636940:android:f5ef40d92a8fa2f8",
+        "android_client_info": {
+          "package_name": "com.thoughtworks.iot.buybuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677140636940-vlfqhvj4s9hh2up7a491e1jake8movn7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thoughtworks.iot.buybuddy",
+            "certificate_hash": "295146397B0ECA3616A59B151F9C65E5D71B5E43"
+          }
+        },
+        {
+          "client_id": "677140636940-gu55smurcdadn5d6sb9k18k8f7m4bt4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW7oeuUk-NXSCDl_RV-EsuvUujM769skA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677140636940-gu55smurcdadn5d6sb9k18k8f7m4bt4c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
