@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.thoughtworks.iot.buybuddy.view.CustomizedListView;
@@ -63,6 +64,10 @@ public class LazyAdapter extends ArrayAdapter<Product> {
 
         holder.price = (TextView) row.findViewById(R.id.price);
         holder.price.setText(holder.product.price);
+
+        holder.image = (ImageView) row.findViewById(R.id.productImage);
+        int resID = context.getResources().getIdentifier(holder.product.name, "drawable", "com.thoughtworks.iot.buybuddy");
+        holder.image.setImageResource(resID);
 
         row.setTag(holder);
         return row;
